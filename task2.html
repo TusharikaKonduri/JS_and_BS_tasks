@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>21BCE9922_Task-2_JS</title>
+    </head>
+    <style>
+        button{
+                margin-left:120px;
+            }
+        label{
+            font-size: 19px;
+        }
+    </style>
+    <body>
+        <center>
+            <h2>Arranging the string in Alphabetical Order</h2>
+            <label>Enter a string : </label>
+            <input type="text" id="OriginalString"><br><br>
+            <button onclick="sortingAlpha()">Sort</button>
+            <p id="result"></p>
+        </center>
+        <script>
+            function sortingAlpha(){
+                var OriginalString= document.getElementById("OriginalString").value;
+                var arrayStr = OriginalString.split('');
+                let sortedArr = arrayStr.sort();
+                let sortedStr = sortedArr.join('');
+
+                document.getElementById("result").innerHTML= "The sorted string is : "+sortedStr;
+            }
+        </script>
+    </body>
+</html>

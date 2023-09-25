@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>21BCE9922_Task-1_JS</title>
+        <style>
+            button{
+                margin-left:180px;
+            }
+            label{
+                font-size: 19px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h2>Reversing A Number </h2>
+        <label>Enter a number to reverse :</label>
+        <input type="number" id="inputNumber"><br><br>
+        <button onclick="reverseandDisplay()">Reverse</button>
+        <p id="result"></p>
+    </center>
+
+        <script>
+            function reverseandDisplay(){
+            var inputNumber = document.getElementById("inputNumber").value;
+            let numStr = inputNumber.toString();
+            let arrayNum = numStr.split('');
+            let reversedArrayno = arrayNum.reverse();
+            let reversedStrno = reversedArrayno.join('');
+            let reversedNo = parseInt(reversedStrno);
+            
+            document.getElementById("result").innerHTML = "The reversed Number is : "+reversedNo ;
+
+            }
+            
+
+        </script>
+
+    </body>
+</html>

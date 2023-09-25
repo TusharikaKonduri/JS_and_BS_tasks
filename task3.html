@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>21BCE9922_Task-3_JS</title>
+        <style>
+            button{
+                border-radius: 5px;
+            }
+            .clicked{
+                border-color: lightblue;
+            }
+           
+           body{
+            padding:50px;
+           }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Multiplication And Division Calculator</h2>
+        <form onsubmit="mutiply1()"> 
+        <table >
+            <tr>
+                <td><label for ="no1">1st Number : </label></td>
+                <td><input type ="text" id="no1"><br></td>
+            </tr>
+            <tr>
+                <td><lable for="no2">2nd Number : </lable></td>
+                <td><input type="text" id="no2"></td>
+            </tr>
+            <tr>
+                <td><button id="b1"type="submit" onmouseover="document.getElementById('b1').style.borderColor='deepskyblue'">Multiply</button></td>
+                <td><button id="b2" type="button" onclick = "divide1()"onmouseover="document.getElementById('b2').style.borderColor='deepskyblue'">Divide </button></td>
+            </tr>
+        </table>
+    </form>
+    <div id="result"></div>
+    <div id="result1"></div>
+</center>
+       <script>
+       function mutiply1(){
+        event.preventDefault(); 
+        var num1= document.getElementById("no1").value;
+        var num2= document.getElementById("no2").value;
+        if(num1== "" ||num2 ==""){
+            alert("Enter the numbers");
+        }
+        else{
+        var result = num1*num2;
+        document.getElementById("result").innerHTML= "The Result Is : ";
+        document.getElementById("result1").innerHTML= result;
+
+        }
+       
+       }
+       function divide1(){
+        var num1= document.getElementById("no1").value;
+        var num2= document.getElementById("no2").value;
+        if(num1== "" ||num2 ==""){
+            alert("Enter the numbers");
+        }
+
+        if(num2 ==0){
+            alert("Denominator cannot be 0");
+        }
+        else{
+        var result = num1/num2;
+        document.getElementById("result").innerHTML= "The Result Is : ";
+        document.getElementById("result1").innerHTML= result;
+        }
+       }
+       </script>
+        
+
+    </body>
+</html>
